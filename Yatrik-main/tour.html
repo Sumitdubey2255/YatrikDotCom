@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour Package Page</title>    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+}
+
+main {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+/* Style for the tour-section */
+.tour-section {
+    flex-basis: calc(50% - 20px);
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.tour-content {
+    flex: 1;
+    padding-right: 20px; /* Add padding to separate content from SVG */
+}
+
+.section-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.section-text {
+    margin: 5px 0;
+}
+
+.svg-container {
+    flex: 0 0 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Style for the buttons */
+.view-more-btn {
+    background: linear-gradient(to right, #007BFF, #00BFFF);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.view-more-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.view-more-btn:active {
+    background-color: #004080;
+    transform: scale(0.95);
+}
+
+
+
+.tour-package {
+    flex-basis: calc(33.3333% - 20px);
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.tour-package:hover {
+    transform: translateY(-5px);
+}
+
+.tour-details {
+    margin-top: 10px;
+}
+
+.tour-package img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+.tour-package h2 {
+    margin-top: 15px;
+    font-size: 1.5rem;
+}
+
+.tour-package p {
+    margin-top: 10px;
+}
+
+.tour-package .rating {
+    color: #FFD700;
+    margin-top: 8px;
+}
+
+.booking-form {
+    flex-basis: 65%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+.tour-details-section {
+    flex-basis: 65%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.tour-package {
+    position: relative;
+    flex-basis: calc(33.3333% - 20px);
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.2s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.tour-image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px 10px 0 0;
+    width: 100%;
+    height: 200px;
+}
+
+.tour-image-container img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.tour-details {
+    margin-top: 10px;
+    position: relative;
+    flex: 1;
+}
+
+.package-name {
+    text-align: right;
+}
+
+.icons-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+.icon-bg {
+    background-color: #007BFF;
+    color: #fff;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    transition: background-color 0.2s ease;
+}
+
+/* Add styles for the buttons section */
+.buttons-section {
+    flex-basis: calc(33.3333% - 20px);
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.buttons-section button {
+    flex: 1;
+    margin-right: 10px;
+}
+/* Add styles for the Enquiry button */
+.enquiry-btn {
+    background-color: #FF4500;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-left: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.enquiry-btn:hover {
+    background-color: #FF5722;
+    transform: scale(1.05);
+}
+
+.enquiry-btn:active {
+    background-color: #E64A19;
+    transform: scale(0.95);
+}
+
+/* Add styles for the View Details button */
+.view-details-btn {
+    background-color: #3CB371;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.view-details-btn:hover {
+    background-color: #32CD32;
+    transform: scale(1.05);
+}
+
+.view-details-btn:active {
+    background-color: #2E8B57;
+    transform: scale(0.95);
+}
+
+.book-now-btn {
+    background: linear-gradient(to right, #007BFF, #00BFFF);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.book-now-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.book-now-btn:active {
+    background-color: #004080;
+    transform: scale(0.95);
+}
+
+/* Add styles for the SVG icons */
+.icons-container {
+    display: flex;
+    /* justify-content: space-around; */
+    margin-top: 20px;
+}
+
+.icon-bg {
+    background-color: #93f7b6;
+    color: #fff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    transition: background-color 0.2s ease;
+}
+
+.icon-bg:hover {
+    background-color: #a7d2ff;
+}
+
+    .tour-package {
+        position: relative;
+        flex-basis: calc(33.3333% - 20px);
+        border: 1px solid #ccc;
+        padding: 20px;
+        margin-bottom: 20px;
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        overflow: hidden;
+        transition: transform 0.2s ease;
+        display: flex;
+        flex-direction: row; /* Change to row to align elements side by side */
+    }
+
+    .tour-image-container {
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px 0 0 10px; /* Adjust border-radius for tour image */
+        width: 200px;
+        height: 200px;
+    }
+
+    .tour-image-container img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+        border-radius: 10px 0 0 10px; /* Match the border-radius with the container */
+    }
+
+    .tour-details {
+        margin-left: 20px; /* Add margin between the image and tour details */
+        flex: 1;
+        display: flex;
+        flex-direction: column; /* Align details in a column */
+    }
+
+    .package-name {
+        text-align: right;
+    }
+
+    .icons-container {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 10px;
+    }
+
+    .icon-bg {
+        background-color: #007BFF;
+        color: #fff;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 5px;
+        transition: background-color 0.2s ease;
+    }
+
+
+    .extra-details-section {
+    flex-basis: calc(33.3333% - 20px);
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #f7f7f7;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.extra-details-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.extra-detail {
+    flex: 1;
+    text-align: center;
+}
+
+</style>
+</head>
+<body>
+    <main>
+        <!-- First div: Tour details -->
+        <div class="tour-package">
+            <div class="tour-image-container">
+                <img src="images/beach-1.jpg" alt="Tour Package Image">
+            </div>
+            <div class="tour-details">
+                <h2 class="package-name">Tour Package Name</h2>
+                <!-- SVG icons for hotels, flights, restaurants, buses, cameras, and tickets -->
+                <div class="icons-container">
+                    <div class="icon-bg">
+                        <i class="fas fa-hotel"></i>
+                    </div>
+                    <div class="icon-bg">
+                        <i class="fas fa-plane"></i>
+                    </div>
+                    <div class="icon-bg">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <div class="icon-bg">
+                        <i class="fas fa-bus"></i>
+                    </div>
+                    <div class="icon-bg">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <div class="icon-bg">
+                        <i class="fas fa-ticket-alt"></i>
+                    </div>
+                </div>
+                <p class="rating">Rating: <i class="fas fa-star"></i> 4.8</p>
+            </div>
+        </div>
+
+        <!-- Second div: Extra details -->
+        <div class="extra-details-section">
+            <div class="extra-details-row">
+                <div class="extra-detail">Extra Detail 1</div>
+                <div class="extra-detail">Extra Detail 2</div>
+            </div>
+            <div class="extra-details-row">
+                <div class="extra-detail">Extra Detail 3</div>
+                <div class="extra-detail">Extra Detail 4</div>
+            </div>
+        </div>
+        <!-- Third div: Buttons -->
+        <div class="buttons-section">
+            <button class="enquiry-btn">Enquiry Now</button>
+            <button class="view-details-btn">View Details</button>
+        </div>
+    </main>
+</body>
+</html>

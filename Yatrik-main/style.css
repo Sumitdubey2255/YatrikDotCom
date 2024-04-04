@@ -1,0 +1,2904 @@
+
+* {
+    box-sizing: border-box;
+}
+
+.searchCard {
+    position: relative;
+    margin-bottom: 1.25rem;
+}
+
+@media (max-width: 767px) {
+    .searchCard {
+        margin-bottom: 10px;
+    }
+}
+
+.searchCard .invisibleCardOverlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: transparent;
+    z-index: 3;
+    cursor: pointer;
+}
+
+.searchCard .adCompare {
+    display: block;
+    position: absolute;
+    left: 50%;
+    right: 0;
+    margin: auto;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 11;
+    font-size: 0.875rem;
+    color: #FFF !important;
+    padding: 0 1rem;
+}
+
+@media (min-width: 993px) and (max-width: 1199px) {
+    .searchCard .adCompare {
+        width: 140px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    .searchCard .adCompare {
+        padding: 0 0.5rem;
+    }
+}
+
+.searchCard .adCompare:hover {
+    background: rgb(0, 0, 0);
+}
+
+.searchCard .searchCardHolder {
+    position: relative;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.07);
+    padding: 15px 15px 0 15px;
+    width: 100%;
+    background: #FFF;
+}
+
+@media (max-width: 767px) {
+    .searchCard .searchCardHolder {
+        padding: 11px 11px 0 11px;
+    }
+}
+
+.searchCard .searchCardHolder.bordered {
+    border: 1px solid #D8D8D8;
+}
+
+.searchCard .searchCardHolder.addedToCompare {
+    border: 1px solid #29499A;
+}
+
+.searchCard .searchCardHolder .priceData {
+    padding-top: 25px;
+}
+
+.searchCard .searchCardHolder .primaryInfo {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    min-height: 245px;
+    padding-bottom: 15px;
+}
+
+@media (max-width: 1199px) and (min-width: 993px) {
+    .searchCard .searchCardHolder .primaryInfo {
+        min-height: 230px;
+    }
+}
+
+.searchCard .searchCardHolder .moreButton .linkButton {
+    font-size: 11px !important;
+}
+
+.searchCard .searchCardHolder .secndryInfo {
+    width: 100%;
+    position: relative;
+}
+
+@media (max-width: 1200px) {
+    .searchCard .searchCardHolder .secndryInfo {
+        z-index: 1000;
+    }
+}
+
+.searchCard .searchCardHolder .secndryInfo:before {
+    position: absolute;
+    z-index: 2;
+    content: "";
+    width: calc(100% + 30px);
+    height: 20px;
+    background: linear-gradient(#b1b1b1, #fff);
+    opacity: 0.2;
+    top: 0px;
+    left: -15px;
+}
+
+@media (max-width: 1200px) {
+    .searchCard .searchCardHolder .secndryInfo:before {
+        z-index: 0;
+        display: none;
+    }
+}
+
+.searchCard .searchCardHolder .secndryInfo .belowDrawer {
+    width: 100%;
+    margin-top: 20px;
+    position: relative;
+}
+
+.searchCard .searchCardHolder .secndryInfo .belowDrawer .closeDestination {
+    background: transparent;
+    border: 0;
+    outline: 0;
+    position: absolute;
+    top: 5px;
+    right: 0;
+    z-index: 10;
+}
+
+.searchCard .searchCardHolder .secndryInfo .belowDrawer .closeDestination .icon-close {
+    font-size: 12px;
+}
+
+@media (max-width: 1200px) {
+    .searchCard .searchCardHolder .secndryInfo .belowDrawer .closeDestination {
+        display: none;
+    }
+}
+
+.searchCard .searchCardHolder .secndryInfo .belowDrawer .allDestinations {
+    height: 135px;
+    overflow-y: auto;
+}
+
+.searchCard .searchCardHolder .secndryInfo .belowDrawer .buttonIcon {
+    background: transparent !important;
+    border: 0 !important;
+    outline: 0 !important;
+    font-size: 10px !important;
+    height: 15px;
+    line-height: 15px;
+}
+
+.searchCard .searchCardHolder .secndryInfo .belowDrawer .daysCities {
+    position: relative;
+}
+
+.searchCard .searchCardHolder .secndryInfo .belowDrawer .daysCities .cityNumber {
+    border-left: 0;
+}
+
+.searchCard .searchCardHolder .secndryInfo .belowDrawer .tabButton {
+    width: calc(29% + 15px);
+    position: relative;
+    left: -15px;
+}
+
+.searchCard .searchCardHolder .secndryInfo .belowDrawer .tabButton.verticleTabButton ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.searchCard .searchCardHolder .secndryInfo .belowDrawer .tabButton .nav-pills li:first-child .nav-link {
+    border-radius: 0 0 15px 0;
+}
+
+.searchCard .searchCardHolder .secndryInfo .belowDrawer .tabButton .nav-pills li:nth-child(2) .nav-link {
+    border-radius: 0 15px 0 9px !important;
+}
+
+.searchCard .searchCardHolder .secndryInfo .belowDrawer .tabButton .nav-pills .nav-link {
+    background: #EEEEEE;
+    font-size: 14px;
+    font-weight: normal;
+    color: #515151;
+    height: 86px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 !important;
+    box-shadow: 1px 0px 10px 2px rgba(0, 0, 0, 0.1) inset;
+    cursor: pointer;
+}
+
+.searchCard .searchCardHolder .secndryInfo .belowDrawer .tabButton .nav-pills .nav-link span[class^=icon] {
+    font-size: 24px;
+}
+
+.searchCard .searchCardHolder .secndryInfo .belowDrawer .tabButton .nav-pills .nav-link.active {
+    color: #29499A;
+    font-weight: bold;
+    background: #fff;
+    border-radius: 0 !important;
+    box-shadow: none;
+}
+
+.searchCard .searchCardHolder .secndryInfo .belowDrawer .tabContentWpr {
+    padding-top: 20px;
+    width: calc(71% - 40px);
+    margin-left: 15px;
+}
+
+.searchCard .searchCardHolder .secndryInfo .belowDrawer .tabContentWpr .skeletonCard {
+    border: 0;
+    padding-top: 0;
+}
+
+.searchCard .searchCardHolder .secndryInfo .belowDrawer .tabContentWpr #yearTab {
+    border-bottom: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.searchCard .searchCardHolder .secndryInfo .belowDrawer .tabContentWpr #yearTab li .nav-link {
+    height: 24px;
+    padding: 0 15px;
+    background: #fff;
+    font-size: 12px;
+    line-height: 24px;
+    border: 1px solid #C4C4C4;
+    border-radius: 3px;
+    color: #333333 !important;
+}
+
+.searchCard .searchCardHolder .secndryInfo .belowDrawer .tabContentWpr #yearTab li .nav-link.active {
+    background: #FFD800;
+    font-weight: 700;
+    border: 0;
+    line-height: 27px;
+}
+
+.searchCard .searchCardHolder .secndryInfo .belowDrawer .tabContentWpr .monthContainer {
+    height: 80px;
+    overflow-y: auto;
+}
+
+.searchCard .searchCardHolder .secndryInfo .belowDrawer .tabContentWpr .monthContainer ul {
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 6px;
+    flex-wrap: wrap;
+}
+
+.searchCard .searchCardHolder .secndryInfo .belowDrawer .tabContentWpr .monthContainer ul li {
+    list-style-type: none;
+    width: 48px;
+    margin-bottom: 6px;
+}
+
+.searchCard .searchCardHolder .secndryInfo .belowDrawer .tabContentWpr .monthContainer ul li span {
+    display: block;
+    border: 1px solid #C4C4C4;
+    border-radius: 3px;
+    font-size: 13px;
+    font-weight: 600;
+    width: 34px;
+    height: 32px;
+    text-align: center;
+    line-height: 32px;
+    margin: auto;
+}
+
+.searchCard .searchCardHolder .secndryInfo .belowDrawer .tabContentWpr .monthContainer ul li span.active {
+    border-color: #5CAC33;
+    color: white;
+    background: #5CAC33;
+}
+
+.searchCard .searchCardHolder .secndryInfo .belowDrawer .tabContentWpr .monthContainer ul li span.lowPrices {
+    border-color: #5CAC33;
+    color: #5CAC33;
+}
+
+.searchCard .searchCardHolder .secndryInfo .belowDrawer .tabContentWpr .monthContainer ul li span.soldout {
+    opacity: 0.5;
+    border-color: #5CAC33;
+    color: #5CAC33;
+    position: relative;
+}
+
+.searchCard .searchCardHolder .secndryInfo .belowDrawer .tabContentWpr .monthContainer ul li span.soldout:after {
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 42px;
+    transform: rotate(45deg);
+    background: #B4B4B4;
+    left: 15px;
+    top: -6px;
+}
+
+.searchCard .searchCardHolder .secndryInfo .belowDrawer .tabContentWpr .monthContainer ul li label {
+    font-size: 10px;
+    line-height: 14px;
+    font-weight: 700;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 0;
+    position: relative;
+    top: -4px;
+}
+
+.searchCard .searchCardHolder .secndryInfo .belowDrawer .tabContentWpr .monthContainer ul li label.emergancy {
+    color: #ED3030;
+}
+
+.searchCard .searchCardHolder .secndryInfo .belowDrawer .tabContentWpr .monthContainer ul li label.soldOutLabel {
+    color: #595959;
+}
+
+.searchCard .searchCardHolder .secndryInfo .belowDrawer .tabContentWpr .daysCities {
+    margin-top: 10px;
+}
+
+.searchCard .searchCardHolder .secndryInfo .belowDrawer .tabContentWpr .destinationWpr {
+    margin-top: 5px;
+}
+
+.searchCard .searchCardHolder .secndryInfo .belowDrawer .tabContentWpr .destinationWpr .destinationCol {
+    margin-bottom: 0px;
+    margin-top: 20px;
+}
+
+.searchCard .searchCardHolder .secndryInfo .belowDrawer .tabContentWpr .destinationWpr .destinationCol .icon-location {
+    color: #23B4B1;
+}
+
+.searchCard .searchCardHolder .secndryInfo .belowDrawer .tabContentWpr .destinationWpr .destinationCol:nth-last-child(2) {
+    margin-right: 24px;
+}
+
+.searchCard .searchCardHolder .secndryInfo .belowDrawer .tabContentWpr .destinationWpr .destinationCol:nth-last-child(2):after {
+    display: inline-block;
+}
+
+.searchCard .searchCardHolder .secndryInfo .belowDrawer .tabContentWpr .destinationWpr .destinationCol:last-child:after {
+    width: 0;
+}
+
+.searchCard .searchCardHolder .dataHolderLeft {
+    width: 65%;
+    padding-right: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.searchCard .searchCardHolder .dataHolderLeft .imageHolder {
+    display: none;
+}
+
+.searchCard .searchCardHolder .onRequest {
+    color: #4068C2;
+    font-size: 13px;
+    border: 1px solid #4068C2;
+    font-weight: 700;
+    border-radius: 3px;
+    height: 24px;
+    width: 186px;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    padding-right: 6px;
+    position: relative;
+    padding-left: 36px;
+}
+
+.searchCard .searchCardHolder .onRequest .icon-request {
+    background: #4068C2;
+    color: #fff;
+    width: 32px;
+    height: 24px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.searchCard .searchCardHolder .onRequest .icon-request:before {
+    display: none;
+}
+
+.searchCard .searchCardHolder .onRequest .icon-request svg {
+    position: relative;
+    margin: auto;
+    left: -7px;
+    top: 3px;
+}
+
+@media (max-width: 1440px) and (min-width: 1200px) {
+    .searchCard .searchCardHolder .onRequest {
+        width: 180px;
+        padding-left: 30px;
+    }
+
+    .searchCard .searchCardHolder .onRequest .icon-request {
+        width: 28px;
+    }
+}
+
+@media (max-width: 374px) {
+    .searchCard .searchCardHolder .onRequest {
+        margin-left: auto;
+    }
+}
+
+@media (max-width: 767px) {
+    .searchCard .searchCardHolder .onRequest {
+        width: 187px;
+    }
+}
+
+@media (max-width: 1199px) and (min-width: 993px) {
+    .searchCard .searchCardHolder .onRequest {
+        margin-left: auto;
+    }
+}
+
+.searchCard .searchCardHolder .dataHolderRight {
+    width: 35%;
+    padding-left: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.searchCard .searchCardHolder .dataHolderRight:before {
+    position: absolute;
+    z-index: 0;
+    content: "";
+    width: calc(100% + 16px);
+    height: calc(100% + 30px);
+    background: #CFDDFF;
+    opacity: 0.2;
+    top: -15px;
+    left: 0;
+    border-radius: 0 10px 10px 0;
+}
+
+.searchCard .searchCardHolder .dataHolderRight .buttonsforGrid {
+    display: none;
+}
+
+.searchCard .searchCardHolder .dataHolderRight .listViewHeight {
+    min-height: 135px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+@media (max-width: 1200px) and (min-width: 993px) {
+    .searchCard .searchCardHolder .dataHolderRight .listViewHeight {
+        min-height: 120px;
+    }
+}
+
+@media (max-width: 767px) {
+    .searchCard .searchCardHolder .dataHolderRight .listViewHeight {
+        min-height: 10px;
+    }
+}
+
+.searchCard .searchCardHolder .dataHolderRight .urgencyLabelHolder {
+    height: 21px;
+}
+
+.searchCard.specialhighlighter {
+    padding-top: 1.7rem;
+}
+
+.searchCard .imageHolder {
+    width: 27%;
+    border-radius: 1px 0 0 9px;
+    position: relative;
+}
+
+.searchCard .imageHolder .imageWpr {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.searchCard .imageHolder .promodiv {
+    display: inline-flex;
+    align-items: center;
+    position: absolute;
+    left: -6px;
+    top: 15px;
+    padding: 3px 3px 3px 7px;
+    border-radius: 0;
+    z-index: 2;
+    color: #FFF;
+    font-size: 8px;
+    line-height: 11px;
+    background: linear-gradient(92.53deg, #BE1F25 -2.92%, #F85157 50.45%);
+}
+
+.searchCard .imageHolder .promodiv.studentConcession {
+    background: linear-gradient(273.58deg, #FF2F2F 33.39%, #9D0084 99.5%);
+}
+
+.searchCard .imageHolder .promodiv.studentConcession .flagDesign:before, .searchCard .imageHolder .promodiv.studentConcession .flagDesign:after {
+    border-left: 10px solid #FF2F2F;
+}
+
+.searchCard .imageHolder .promodiv.splCouple {
+    background: linear-gradient(92.53deg, #AD1945 -2.92%, #FF008A 50.45%);
+}
+
+.searchCard .imageHolder .promodiv.splCouple .flagDesign:before, .searchCard .imageHolder .promodiv.splCouple .flagDesign:after {
+    border-left: 10px solid #FF008A;
+}
+
+.searchCard .imageHolder .promodiv:before {
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 0px solid transparent;
+    border-top: 7px solid #242424;
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+}
+
+.searchCard .imageHolder .promodiv .flagDesign {
+    position: absolute;
+    height: 100%;
+    right: 0;
+}
+
+.searchCard .imageHolder .promodiv .flagDesign:before {
+    position: absolute;
+    content: "";
+    right: -10px;
+    top: 0px;
+    width: 0;
+    height: 0;
+    border-bottom: 15px solid transparent;
+    border-left: 10px solid rgb(248, 81, 87);
+}
+
+.searchCard .imageHolder .promodiv .flagDesign:after {
+    position: absolute;
+    content: "";
+    right: -10px;
+    bottom: 0px;
+    width: 0;
+    height: 0;
+    border-top: 15px solid transparent;
+    border-left: 10px solid rgb(248, 81, 87);
+}
+
+.searchCard .imageHolder .promodiv .extraBold {
+    font-size: 10px;
+    line-height: 13px;
+    letter-spacing: 0.04rem;
+}
+
+.searchCard .imageHolder .promodiv.extraOff {
+    background: #5CAC33;
+}
+
+.searchCard .imageHolder .promodiv.honeymoondisc {
+    background: #F85157;
+}
+
+.searchCard .imageHolder .promodiv .icon-offer {
+    width: 12px;
+    height: 12px;
+    font-size: 12px;
+}
+
+.searchCard .imageHolder img {
+    height: 100%;
+    max-width: 100%;
+    position: relative;
+    border-radius: 10px;
+    z-index: 0;
+    object-fit: cover;
+}
+
+.searchCard .imageHolder .imageOverlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
+    border-radius: 8px 8px 0 8px;
+    z-index: 0;
+}
+
+.searchCard .imageHolder .imageOverlay .label-tag {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    text-align: center;
+    padding: 1.5px 4px 0.5px;
+    font-weight: 800;
+    font-size: 8px;
+    line-height: 14px;
+    letter-spacing: 0.04em;
+    color: #000000;
+    min-width: 56px;
+    background-color: #FFD800;
+    border-radius: 100px;
+}
+
+@media (min-width: 768px) {
+    .searchCard .imageHolder .imageOverlay .label-tag {
+        padding: 3px 8px;
+        font-size: 11px;
+        min-width: 78px;
+    }
+}
+
+.searchCard .imageHolder .imageOverlay .extra-off {
+    position: absolute;
+    left: -6px;
+    top: 30px;
+    min-width: 75px;
+    background: linear-gradient(92.53deg, #BE1F25 -2.92%, #F85157 50.45%);
+}
+
+@media (min-width: 768px) {
+    .searchCard .imageHolder .imageOverlay .extra-off {
+        top: 40px;
+        min-width: 110px;
+    }
+}
+
+.searchCard .imageHolder .imageOverlay .extra-off::before, .searchCard .imageHolder .imageOverlay .extra-off::after {
+    content: "";
+    position: absolute;
+}
+
+.searchCard .imageHolder .imageOverlay .extra-off::before {
+    top: 0;
+    right: -6px;
+    bottom: 0;
+    border: 7px solid #f85157;
+    border-left-width: 0;
+    border-right-color: transparent;
+    z-index: -1;
+}
+
+@media (min-width: 768px) {
+    .searchCard .imageHolder .imageOverlay .extra-off::before {
+        right: -13px;
+        border-width: 12px;
+    }
+}
+
+.searchCard .imageHolder .imageOverlay .extra-off::after {
+    left: 0;
+    bottom: -6px;
+    border: 7px solid transparent;
+    border-right-color: #242424;
+    border-top-width: 0;
+    border-left-width: 0;
+}
+
+.searchCard .imageHolder .imageOverlay .extra-off-inner {
+    padding: 1px;
+    padding-left: 12px;
+    height: 14px;
+    color: #FFFFFF;
+    background: no-repeat center url("data:image/svg+xml,%3Csvg width='13' height='12' viewBox='0 0 13 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.2596 5.99999L11.9228 4.85381C12.0025 4.71591 12.0242 4.552 11.9831 4.39812C11.9419 4.24424 11.8414 4.11299 11.7035 4.03323L10.5562 3.37003V2.04844C10.5562 1.88912 10.4929 1.73633 10.3803 1.62367C10.2676 1.51101 10.1148 1.44772 9.95549 1.44772H8.63455L7.97197 0.300945C7.89195 0.16333 7.76096 0.0627621 7.60734 0.0210087C7.53115 0.000353459 7.45162 -0.0049726 7.37336 0.00533926C7.29509 0.0156511 7.21965 0.0413959 7.15141 0.081081L6.00407 0.744278L4.85673 0.0804802C4.71876 0.000823095 4.5548 -0.0207636 4.40092 0.0204686C4.24703 0.0617009 4.11583 0.162375 4.03617 0.300344L3.37299 1.44772H2.05205C1.89273 1.44772 1.73994 1.51101 1.62729 1.62367C1.51463 1.73633 1.45135 1.88912 1.45135 2.04844V3.36943L0.304004 4.03263C0.235543 4.07201 0.175538 4.12453 0.127436 4.18717C0.0793342 4.24981 0.0440836 4.32134 0.0237094 4.39765C0.00333532 4.47396 -0.0017607 4.55354 0.00871416 4.63182C0.019189 4.71011 0.0450282 4.78555 0.0847474 4.85381L0.747923 5.99999L0.0847474 7.14617C0.0054479 7.2842 -0.0160673 7.44798 0.0248924 7.60181C0.0658522 7.75564 0.165965 7.88704 0.303403 7.96735L1.45074 8.63055V9.95154C1.45074 10.1109 1.51403 10.2637 1.62669 10.3763C1.73934 10.489 1.89213 10.5523 2.05145 10.5523H3.37299L4.03617 11.6996C4.08935 11.7906 4.16528 11.8661 4.25649 11.9187C4.3477 11.9714 4.45106 11.9994 4.55638 12C4.6609 12 4.76482 11.9724 4.85733 11.9189L6.00347 11.2557L7.15081 11.9189C7.28874 11.9984 7.45259 12.02 7.60642 11.9789C7.76025 11.9378 7.8915 11.8374 7.97137 11.6996L8.63394 10.5523H9.95489C10.1142 10.5523 10.267 10.489 10.3797 10.3763C10.4923 10.2637 10.5556 10.1109 10.5556 9.95154V8.63055L11.7029 7.96735C11.7713 7.92786 11.8312 7.87528 11.8792 7.81263C11.9272 7.74997 11.9624 7.67847 11.9827 7.6022C12.0031 7.52594 12.0082 7.44641 11.9979 7.36816C11.9875 7.28991 11.9618 7.21448 11.9222 7.14617L11.2596 5.99999ZM4.50171 2.99038C4.74077 2.99046 4.97 3.0855 5.13898 3.2546C5.30796 3.4237 5.40285 3.653 5.40277 3.89206C5.40269 4.13112 5.30765 4.36036 5.13855 4.52935C4.96946 4.69833 4.74017 4.79322 4.50111 4.79314C4.26206 4.79306 4.03283 4.69802 3.86385 4.52892C3.69487 4.35982 3.59998 4.13052 3.60006 3.89146C3.60014 3.6524 3.69518 3.42316 3.86427 3.25417C4.03336 3.08519 4.26266 2.9903 4.50171 2.99038ZM4.68192 8.7573L3.7208 8.03704L7.32501 3.23127L8.28614 3.95153L4.68192 8.7573ZM7.50522 8.99759C7.38686 8.99755 7.26966 8.9742 7.16031 8.92886C7.05097 8.88353 6.95163 8.8171 6.86796 8.73337C6.78429 8.64964 6.71793 8.55025 6.67267 8.44088C6.62741 8.3315 6.60413 8.21428 6.60417 8.09591C6.60421 7.97754 6.62756 7.86033 6.6729 7.75099C6.71823 7.64164 6.78466 7.5423 6.86838 7.45862C6.95211 7.37495 7.0515 7.30859 7.16087 7.26333C7.27024 7.21806 7.38746 7.19479 7.50583 7.19483C7.74488 7.19491 7.97411 7.28995 8.14309 7.45905C8.31207 7.62815 8.40696 7.85745 8.40688 8.09651C8.4068 8.33557 8.31176 8.56481 8.14267 8.7338C7.97357 8.90278 7.74428 8.99767 7.50522 8.99759Z' fill='white'/%3E%3C/svg%3E");
+    background-position-x: 2px;
+    background-size: 8px;
+}
+
+@media (min-width: 768px) {
+    .searchCard .imageHolder .imageOverlay .extra-off-inner {
+        padding-left: 20px;
+        height: 24px;
+        background-size: 12px;
+        background-position-x: 4px;
+    }
+}
+
+.searchCard .imageHolder .imageOverlay .extra-off-inner .text-bold {
+    font-weight: 800;
+    font-size: 8px;
+    line-height: 13px;
+    letter-spacing: 0.1em;
+}
+
+@media (min-width: 768px) {
+    .searchCard .imageHolder .imageOverlay .extra-off-inner .text-bold {
+        font-size: 10px;
+        line-height: normal;
+    }
+}
+
+.searchCard .imageHolder .imageOverlay .extra-off-inner .text-slim {
+    font-weight: 600;
+    font-size: 8px;
+    line-height: 9px;
+}
+
+.searchCard .imageHolder .tourwith {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 2;
+}
+
+.searchCard .imageHolder .tourwith .imagewraper {
+    width: 3.625rem;
+    height: 3.625rem;
+    border-radius: 100%;
+    border: 0.25rem solid #FFF;
+    position: relative;
+    z-index: 2;
+    background: #E5E5E5;
+    margin: auto;
+}
+
+.searchCard .imageHolder .tourwith .imagewraper img {
+    height: 4.5rem;
+    position: absolute;
+    bottom: -1px;
+}
+
+.searchCard .imageHolder .tourwith .nameDate {
+    background: #FFF;
+    border-radius: 0.25rem;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.75rem;
+    line-height: 0.9rem;
+    text-align: center;
+    position: relative;
+    margin-top: -0.3rem;
+}
+
+.searchCard .destinationCol {
+    font-size: 12px;
+    margin-top: 0.4rem;
+    font-weight: 400;
+    margin-right: 24px;
+    position: relative;
+    height: 14px;
+    color: #212221;
+}
+
+.searchCard .destinationCol .icon-location {
+    color: #CDCDCD;
+    position: relative;
+    top: -1px;
+}
+
+@media (max-width: 1199px) {
+    .searchCard .destinationCol {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 767px) {
+    .searchCard .destinationCol {
+        margin-top: 7px;
+    }
+}
+
+.searchCard .destinationCol:after {
+    position: absolute;
+    width: 16px;
+    height: 1px;
+    background-image: url('citiesLinking.5257b98121a8ef01.svg');
+    content: "";
+    right: -19px;
+    bottom: 7px;
+}
+
+@supports (-webkit-touch-callout: none) {
+    @media (max-width: 767px) {
+        .searchCard .destinationCol:after {
+            bottom: 5px;
+        }
+    }
+}
+
+.searchCard .destinationCol:last-child:after {
+    display: none;
+}
+
+@media (max-width: 1199px) and (min-width: 768px) {
+    .searchCard .destinationCol {
+        font-size: 14px;
+        height: 22px;
+    }
+
+    .searchCard .destinationCol:after {
+        bottom: 11px;
+    }
+}
+
+.searchCard .destinationCol .locationIcon {
+    width: 9px;
+    height: 12px;
+    background: #CDCDCD;
+}
+
+.searchCard .destinationCol .nightCount {
+    font-size: 12px;
+    font-weight: 700 !important;
+}
+
+@media (max-width: 1199px) and (min-width: 768px) {
+    .searchCard .destinationCol .nightCount {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 992px) {
+    .searchCard .destinationCol .nightCount {
+        font-size: 14px;
+        line-height: 16px;
+    }
+}
+
+.searchCard .locationIcon svg {
+    position: relative;
+    top: -2px;
+}
+
+.searchCard .daysCities {
+    font-size: 0.8125rem;
+}
+
+@media (min-width: 768px) and (max-width: 1440px) {
+    .searchCard .daysCities {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .searchCard .daysCities {
+        font-size: 12px;
+    }
+}
+
+.searchCard .daysCities .lightText {
+    color: #595959;
+    font-weight: normal;
+}
+
+.searchCard .daysCities .cityNumber {
+    color: #212121;
+    border-left: 1px solid #E1E1E1;
+    padding-left: 8px;
+}
+
+@media (max-width: 1200px) and (min-width: 768px) {
+    .searchCard .daysCities .cityNumber {
+        padding-left: 4px;
+    }
+}
+
+.searchCard .daysCities .daysNumber {
+    position: relative;
+    color: #212121;
+}
+
+@media (max-width: 1200px) and (min-width: 768px) {
+    .searchCard .daysCities .daysNumber {
+        padding-right: 4px !important;
+    }
+}
+
+@supports (-webkit-touch-callout: none) {
+    @media (max-width: 767px) {
+        .searchCard .daysCities .daysNumber {
+            top: 1px;
+        }
+    }
+}
+
+.searchCard .daysCities .daysNumber:after {
+    width: 2px !important;
+    background: #212121;
+    position: absolute;
+    right: -1px;
+    height: 10px;
+    top: 5px;
+    content: "";
+    display: none;
+}
+
+.searchCard .daysCities .daysNumber.countryNumber {
+    border-left: 1px solid #E1E1E1;
+    padding-left: 8px;
+}
+
+@media (max-width: 1200px) and (min-width: 768px) {
+    .searchCard .daysCities .daysNumber.countryNumber {
+        padding-left: 4px;
+    }
+}
+
+.searchCard .dataHolder {
+    width: 73%;
+}
+
+@media (max-width: 767px) {
+    .searchCard .dataHolder .dataHolderLeft .customizedText {
+        display: none;
+    }
+}
+
+.searchCard .dataHolder .tourTypeBlock {
+    display: inline-flex;
+    align-items: center;
+    height: 22px;
+    font-size: 8px;
+    z-index: 0;
+    overflow: hidden;
+    border-radius: 3px;
+    margin-bottom: 5px;
+}
+
+.searchCard .dataHolder .tourTypeBlock .tourType, .searchCard .dataHolder .tourTypeBlock .tourCode {
+    padding: 0 5px;
+    height: 22px;
+    line-height: 25px;
+    text-transform: uppercase;
+}
+
+.searchCard .dataHolder .tourTypeBlock .tourType {
+    background: #FFF;
+    font-weight: 800;
+}
+
+.searchCard .dataHolder .tourTypeBlock .tourCode {
+    border-radius: 0 2px 2px 0;
+}
+
+@media (max-width: 767px) {
+    @supports (-webkit-touch-callout: none) {
+        .searchCard .dataHolder .tourTypeBlock .tourCode {
+            line-height: 22px;
+        }
+    }
+}
+
+.searchCard .dataHolder .tourTypeBlock.groupTour {
+    border: 1px solid #FB7D03;
+    background: #FB7D03;
+}
+
+.searchCard .dataHolder .tourTypeBlock.groupTour .tourType {
+    color: #FB7D03;
+}
+
+.searchCard .dataHolder .tourTypeBlock.groupTour .tourCode {
+    background: #FB7D03;
+    color: #FFF;
+}
+
+.searchCard .dataHolder .tourTypeBlock.customizedTour {
+    border: 1px solid #5AC1F9;
+    background: #5AC1F9;
+}
+
+.searchCard .dataHolder .tourTypeBlock.customizedTour .tourType {
+    color: #5AC1F9;
+}
+
+.searchCard .dataHolder .tourTypeBlock.customizedTour .tourCode {
+    background: #5AC1F9;
+    color: #FFF;
+}
+
+.searchCard .dataHolder .cardTitle {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 800;
+    width: 100%;
+    display: flex;
+    position: relative;
+    align-items: center;
+    margin-top: 3px;
+}
+
+.searchCard .dataHolder .starRating {
+    background: #FB7D03;
+    color: #FFF;
+    font-size: 0.75rem;
+    padding: 0 5px;
+    border-radius: 3px;
+    height: 1.25rem;
+    line-height: 1.25rem;
+}
+
+.searchCard .dataHolder .shortTrip {
+    color: #C7397E;
+    font-size: 10px;
+    border-radius: 3px;
+    height: 22px;
+    line-height: 22px;
+    padding: 0 0.3125rem;
+    display: flex;
+    background: transparent;
+    border: 1px solid #C7397E;
+    margin-bottom: 5px;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+@media (max-width: 767px) {
+    .searchCard .dataHolder .shortTrip {
+        max-width: calc(100% - 5px);
+    }
+}
+
+.searchCard .dataHolder .shortTrip span {
+    max-width: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+@media (min-width: 768px) and (max-width: 1440px) {
+    .searchCard .dataHolder .shortTrip {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .searchCard .dataHolder .shortTrip {
+        font-size: 10px;
+    }
+
+    @supports (-webkit-touch-callout: none) {
+        .searchCard .dataHolder .shortTrip {
+            line-height: 20px;
+        }
+    }
+}
+
+.searchCard .dataHolder .inclusions {
+    padding-top: 0.25rem;
+}
+
+.searchCard .dataHolder .inclusionWpr {
+    margin-bottom: 15px;
+}
+
+@media (max-width: 767px) {
+    .searchCard .dataHolder .inclusionWpr {
+        overflow-x: auto;
+        width: calc(100% + 15px);
+    }
+}
+
+.searchCard .dataHolder .arrow:after {
+    position: absolute;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    border-left: 2px solid #595959;
+    border-bottom: 2px solid #595959;
+    top: 50%;
+    transform: rotate(-45deg);
+    top: 12px;
+    content: "";
+}
+
+@media (max-width: 1199px) {
+    .searchCard .dataHolder .arrow:after {
+        transform: rotate(-137deg);
+        right: 10px;
+    }
+}
+
+.searchCard .dataHolder .arrow.active {
+    color: #29499A;
+}
+
+.searchCard .dataHolder .arrow.active .daysNumber, .searchCard .dataHolder .arrow.active .cityNumber {
+    color: #29499A;
+}
+
+.searchCard .dataHolder .arrow.active:after {
+    transform: rotate(-225deg);
+    top: 18px;
+}
+
+.searchCard .dataHolder .cityDaysWpr {
+    position: relative;
+    padding: 10px 0 8px 0;
+    border-bottom: 1px solid #E1E1E1;
+    cursor: pointer;
+}
+
+@media (max-width: 1199px) {
+    .searchCard .dataHolder .cityDaysWpr.noborder-Bottom {
+        border-bottom: 0;
+    }
+}
+
+.searchCard .dataHolder .cityDaysWpr.active {
+    color: #29499A;
+}
+
+.searchCard .dataHolder .cityDaysWpr.active .daysNumber, .searchCard .dataHolder .cityDaysWpr.active .cityNumber {
+    color: #29499A;
+}
+
+.searchCard .dataHolder .departureWpr {
+    font-size: 13px;
+    position: relative;
+    padding: 10px 0 8px 0;
+    border-bottom: 1px solid #E1E1E1;
+    cursor: pointer;
+}
+
+@media (max-width: 767px) {
+    .searchCard .dataHolder .departureWpr {
+        border-bottom: 0;
+    }
+
+    .searchCard .dataHolder .departureWpr .depDates {
+        padding-left: 3px;
+    }
+}
+
+@media (max-width: 374px) {
+    .searchCard .dataHolder .departureWpr {
+        font-size: 12px;
+    }
+
+    .searchCard .dataHolder .departureWpr .depDates {
+        padding-left: 1px;
+    }
+}
+
+@media (max-width: 992px) and (min-width: 768px) {
+    .searchCard .dataHolder .departureWpr {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 1440px) and (min-width: 1201px) {
+    .searchCard .dataHolder .departureWpr {
+        font-size: 12px;
+    }
+}
+
+.searchCard .dataHolder .departureWpr .icon-destinations {
+    font-size: 17px;
+}
+
+.searchCard .dataHolder .departureWpr:after {
+    position: absolute;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    border-left: 2px solid #595959;
+    border-bottom: 2px solid #595959;
+    top: 50%;
+    transform: rotate(-45deg);
+    top: 14px;
+    content: "";
+}
+
+@media (max-width: 1199px) {
+    .searchCard .dataHolder .departureWpr:after {
+        transform: rotate(-137deg);
+        right: 10px;
+    }
+}
+
+.searchCard .dataHolder .departureWpr.active {
+    color: #29499A;
+}
+
+.searchCard .dataHolder .departureWpr.active .daysNumber, .searchCard .dataHolder .departureWpr.active .cityNumber {
+    color: #29499A;
+}
+
+.searchCard .dataHolder .departureWpr.active:after {
+    transform: rotate(-225deg);
+    top: 19px;
+}
+
+.searchCard .dataHolder .departureWpr.noStarRating {
+    border-bottom: 0;
+}
+
+.searchCard .dataHolder .ratingnReviews {
+    display: flex;
+    align-items: center;
+    padding: 13px 0 0 0;
+}
+
+@media (max-width: 767px) {
+    .searchCard .dataHolder .ratingnReviews {
+        padding: 0;
+        margin-bottom: 15px;
+    }
+}
+
+.searchCard .dataHolder .ratingnReviews.noStarRating {
+    border-bottom: 0;
+}
+
+.searchCard .dataHolder .ratingnReviews .rating {
+    font-size: 12px;
+    line-height: 12px;
+    font-weight: 800;
+    background: #FB7D03;
+    color: #fff;
+    padding: 0px 6px;
+    border-radius: 3px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+}
+
+@supports (-webkit-touch-callout: none) {
+    @media (max-width: 767px) {
+        .searchCard .dataHolder .ratingnReviews .rating {
+            line-height: 20px;
+        }
+    }
+}
+
+.searchCard .dataHolder .ratingnReviews .rating .icon-star {
+    margin-right: 4px;
+}
+
+.searchCard .dataHolder .ratingnReviews .rating .text {
+    position: relative;
+    top: 1px;
+}
+
+@supports (-webkit-touch-callout: none) {
+    @media (max-width: 767px) {
+        .searchCard .dataHolder .ratingnReviews .rating .text {
+            top: 0;
+        }
+    }
+}
+
+.searchCard .dataHolder .ratingnReviews .reviews {
+    font-size: 13px;
+    margin-left: 15px;
+}
+
+.searchCard .dataHolder .callText {
+    padding-top: 13px;
+}
+
+.searchCard .dataHolder .inclusionCol {
+    font-size: 12px;
+}
+
+.searchCard .dataHolder .inclusionCol .text {
+    color: #595959;
+}
+
+@media (min-width: 768px) and (max-width: 1440px) {
+    .searchCard .dataHolder .inclusionCol {
+        font-size: 0.9rem;
+    }
+}
+
+.searchCard .dataHolder .inclusionCol:last-child {
+    margin-right: 0;
+}
+
+.searchCard .dataHolder .inclusionCol [class^=icon] {
+    font-size: 20px;
+    margin-right: 4px;
+    min-width: 1.25rem;
+}
+
+@media (max-width: 1440px) and (min-width: 1200px) {
+    .searchCard .dataHolder .inclusionCol [class^=icon] {
+        font-size: 18px;
+    }
+}
+
+.searchCard .dataHolder .inclusionCol .icon-bed {
+    font-size: 20px;
+}
+
+.searchCard .dataHolder .inclusionCol .icons-visa svg {
+    width: 18px;
+}
+
+@media (max-width: 767px) {
+    .searchCard .dataHolder .quickQuote {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 400px) {
+    .searchCard .dataHolder .quickQuote {
+        min-width: 120px !important;
+    }
+}
+
+.searchCard .dataHolder .lowpriceButton {
+    border: 0;
+    outline: 0;
+    align-items: center;
+    display: flex;
+    line-height: 13px;
+    background: #D2FABE;
+    font-size: 10px;
+    position: relative;
+    border-radius: 3px;
+    padding: 2px 7px;
+}
+
+@media (max-width: 1440px) and (min-width: 1200px) {
+    .searchCard .dataHolder .lowpriceButton {
+        padding: 2px 3px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .searchCard .dataHolder .lowpriceButton {
+        margin-top: 6px;
+    }
+}
+
+.searchCard .dataHolder .lowpriceButton .title {
+    font-size: 10px;
+    line-height: 10px;
+    color: #5F5F5F;
+}
+
+@media (min-width: 1200px) {
+    .searchCard .dataHolder .lowpriceButton .title {
+        text-align: left;
+    }
+}
+
+.searchCard .dataHolder .lowpriceButton .lowestDate {
+    font-size: 11px;
+    line-height: 11px;
+    font-weight: 700 !important;
+}
+
+.searchCard .dataHolder .lowpriceButton .icon-right {
+    transform: rotate(90deg);
+    position: absolute;
+    right: 10px;
+    top: 7px;
+    color: #212221;
+}
+
+.searchCard .dataHolder .lowpriceButton span {
+    color: #2D8500;
+    font-size: 11px;
+    line-height: 15px;
+    display: block;
+}
+
+@media (max-width: 992px) {
+    .searchCard .dataHolder .lowpriceButton {
+        padding: 2px 5px;
+        min-width: 10px;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .searchCard .dataHolder .lowpriceButton span {
+        font-size: 11px;
+        line-height: 13px;
+    }
+
+    .searchCard .dataHolder .lowpriceButton div {
+        padding-right: 2px;
+        line-height: 13px;
+    }
+}
+
+@media (max-width: 400px) {
+    .searchCard .dataHolder .lowpriceButton {
+        flex-direction: column !important;
+        line-height: 12px !important;
+        min-width: 120px !important;
+        justify-content: center !important;
+    }
+
+    .searchCard .dataHolder .lowpriceButton span, .searchCard .dataHolder .lowpriceButton div {
+        line-height: 12px !important;
+    }
+}
+
+.searchCard .dataHolder .allDepartures {
+    border: 1px solid #595959;
+}
+
+.searchCard .dataHolder .allDepartures span[class^=icon] {
+    transform: rotate(90deg);
+}
+
+.searchCard .dataHolder .allDepartures:hover {
+    border-color: transparent;
+}
+
+.searchCard .dataHolder .moreButton {
+    font-size: 11px !important;
+    margin-top: 0.4rem;
+    height: 22px;
+    position: relative;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.searchCard .dataHolder .moreButton span {
+    display: block;
+}
+
+@media (max-width: 1199px) and (min-width: 768px) {
+    .searchCard .dataHolder .moreButton {
+        height: 18px;
+    }
+}
+
+@media (max-width: 767px) {
+    .searchCard .dataHolder .moreButton {
+        font-size: 12px;
+    }
+}
+
+.searchCard .dataHolder .departureCount {
+    font-size: 13px;
+}
+
+.searchCard .dataHolder .superDealLabel {
+    font-size: 12px;
+    color: #5CAC33;
+    margin-top: 4px;
+}
+
+@media (max-width: 767px) {
+    .searchCard .dataHolder .superDealLabel {
+        margin-top: 0;
+        padding-top: 0 !important;
+    }
+}
+
+.searchCard .dataHolder .urgancyLabel {
+    font-size: 12px;
+    color: #ED3030;
+}
+
+.searchCard .dataHolder .urgancyLabel span {
+    font-size: 12px;
+    color: #929292;
+    font-weight: 600;
+}
+
+.searchCard .dataHolder .hubName {
+    font-size: 12px;
+    color: #595959;
+    margin-top: 7px;
+    font-weight: 500;
+}
+
+.searchCard .dataHolder .strikedPrice {
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.searchCard .dataHolder .strikedPrice span {
+    position: relative;
+    color: #ED3030;
+    font-size: 14px;
+}
+
+.searchCard .dataHolder .strikedPrice span:after {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    content: "";
+    height: 1px;
+    background: #ED3030;
+}
+
+.searchCard .dataHolder .price {
+    font-size: 22px;
+    line-height: 24px;
+    margin-top: 0;
+}
+
+@media (max-width: 767px) {
+    .searchCard .dataHolder .price {
+        font-size: 18px;
+    }
+}
+
+.searchCard .dataHolder .price.noPrice {
+    font-size: 13px;
+    line-height: 24px;
+    margin-top: 40px;
+}
+
+@media (max-width: 767px) {
+    .searchCard .dataHolder .price.noPrice {
+        margin-top: 0;
+    }
+}
+
+.searchCard .dataHolder .price.noPrice .comingSoon {
+    color: #4068C2;
+    font-size: 13px;
+    border: 1px solid #4068C2;
+    border-radius: 3px;
+    height: 24px;
+    width: 135px;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    padding-right: 6px;
+    margin-top: 27px;
+    font-weight: 700 !important;
+    background: #fff !important;
+}
+
+.searchCard .dataHolder .price.noPrice .comingSoon .icon-coming-soon {
+    background: #4068C2;
+    color: #fff;
+    width: 32px;
+    height: 24px;
+}
+
+.searchCard .dataHolder .price.noPrice .comingSoon .icon-coming-soon:before {
+    display: none;
+}
+
+.searchCard .dataHolder .price.noPrice .comingSoon .icon-coming-soon svg {
+    position: relative;
+    margin: auto;
+    left: -4px;
+}
+
+.searchCard .dataHolder .priceNote {
+    font-size: 0.7rem;
+}
+
+@media (max-width: 767px) {
+    .searchCard .dataHolder .priceNote {
+        font-size: 11px;
+    }
+}
+
+.searchCard .dataHolder .buttonHolder {
+    position: relative;
+    margin-top: auto;
+}
+
+.searchCard .dataHolder .buttonHolder .viewDetails {
+    width: 100%;
+    height: 45px !important;
+}
+
+@media (max-width: 767px) {
+    .searchCard .dataHolder .buttonHolder .viewDetails {
+        height: 35px !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .searchCard .dataHolder .buttonHolder .quickQuote {
+        display: none;
+    }
+
+    .searchCard .dataHolder .buttonHolder .mob-halfWid {
+        width: calc(50% - 10px);
+    }
+
+    .searchCard .dataHolder .buttonHolder .mob-halfWid button.enquireNow {
+        width: 100% !important;
+        padding: 0 0;
+        height: 32px;
+    }
+}
+
+.searchCard .dataHolder .buttonHolder .quickQuote, .searchCard .dataHolder .buttonHolder .enquireNow {
+    width: calc(50% - 5px);
+    padding: 0 0;
+    height: 35px;
+}
+
+.searchCard .dataHolder .buttonHolder .enquireNow {
+    font-size: 12px;
+}
+
+.searchCard .dataHolder .buttonHolder button {
+    width: calc(100% - 30px);
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    .searchCard .dataHolder .buttonHolder button {
+        font-size: 13px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 991px) {
+    .searchCard .dataHolder .buttonHolder button {
+        font-size: 13px;
+        height: 32px;
+        padding: 6px 20px;
+    }
+}
+
+@media (max-width: 991px) {
+    .searchCard .dataHolder .buttonHolder button {
+        padding: 6px 15px;
+    }
+}
+
+.searchCard .dataHolder .leftData {
+    width: calc(100% - 12.8rem);
+}
+
+.searchCard .dataHolder .leftData h4.headLabel {
+    font-size: 0.875rem;
+    text-transform: uppercase;
+}
+
+@media (min-width: 768px) and (max-width: 1440px) {
+    .searchCard .dataHolder .leftData h4.headLabel {
+        font-size: 1rem;
+    }
+}
+
+.searchCard .dataHolder .secRow.negMarg {
+    margin-top: 0px;
+}
+
+.firstRow {
+    min-height: 118px;
+}
+
+@media (max-width: 992px) {
+    .customizedText {
+        padding-top: 5px;
+        padding-bottom: 10px;
+    }
+}
+
+.searchCard.customise-card .callText {
+    padding-top: 0 !important;
+}
+
+.searchCard.customise-card .text-muted {
+    margin-top: 13px;
+    font-weight: 500;
+}
+
+.searchCard.customise-card .dataHolder .buttonHolder .enquireNow {
+    width: 100%;
+}
+
+.searchCard.customise-card .searchCardHolder .priceData {
+    margin-top: 25px;
+    margin-bottom: 5px;
+}
+
+@media (max-width: 767px) {
+    .searchCard.customise-card .searchCardHolder .priceData {
+        margin-top: 0;
+    }
+}
+
+.searchCard.customise-card .searchCardHolder .price.noPrice .comingSoon {
+    margin-top: 0;
+}
+
+
+
+.depMonthswpr {
+    position: relative;
+    width: 100%;
+}
+
+.depMonthswpr .depMonths {
+    border: 1px solid #929292;
+    border-radius: 6px;
+    font-size: 0.785rem;
+    line-height: 0.5rem;
+    color: #29499A !important;
+    padding: 0.7rem 0.4rem;
+    text-transform: capitalize;
+    margin-right: 0.5rem;
+}
+
+.depMonthswpr .depMonths:hover {
+    background: transparent;
+    color: #29499A !important;
+}
+
+.depMonthswpr .depMonths:last-child {
+    margin-right: 0;
+}
+
+@media (min-width: 768px) and (max-width: 1440px) {
+    .depMonthswpr .depMonths {
+        font-size: 1rem;
+    }
+}
+
+.depMonthswpr .depMonthsHolder {
+    position: relative;
+    z-index: 1;
+    width: calc(100% - 4rem);
+}
+
+.d-flex {
+    display: flex !important;
+}
+
+.hide {
+    display: none !important;
+}
+
+@media (max-width: 1350px) {
+    .depMonthswpr .depDatewpr .depDateHolder {
+        width: calc(100% - 9.8rem);
+    }
+}
+
+@media (max-width: 992px) {
+    .depMonthswpr .depDatewpr .depDateHolder {
+        width: calc(100% - 10.8rem);
+        margin-right: 2.5rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1440px) {
+    .searchCard .searchCardHolder {
+        min-height: auto;
+    }
+
+    .firstRow {
+        min-height: 106px;
+    }
+
+    .searchCard .dataHolder .secRow.negMarg {
+        margin-top: 0;
+    }
+
+    .gridView.searchCard .dataHolder .firstRow {
+        min-height: 70px;
+    }
+
+    .likeNShare .buttonIcon [class^=icon] {
+        position: relative;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+    .searchCard .searchCardHolder {
+        height: auto;
+    }
+
+    .firstRow {
+        min-height: 105px;
+    }
+
+    .firstRow .leftData, .firstRow .priceData {
+        padding-bottom: 0.5rem;
+    }
+}
+
+@media (min-width: 993px) and (max-width: 1199px) {
+    .depMonthswpr .depMonthsHolder {
+        width: calc(100% - 5rem);
+    }
+
+    .depMonthswpr .depDatewpr .depDateHolder {
+        width: calc(100% - 9.2rem);
+        margin-right: 1.7rem;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1440px) {
+    .searchCard .searchCardHolder {
+        height: auto;
+        min-height: auto;
+    }
+
+    .firstRow {
+        min-height: 114px;
+    }
+}
+
+@media (max-width: 962px) and (min-width: 768px) {
+    .searchCard .searchCardHolder .dataHolderLeft {
+        width: calc(100% - 200px);
+    }
+
+    .searchCard .searchCardHolder .dataHolderRight {
+        width: 200px;
+    }
+
+    .searchCard .dataHolder .quickQuote {
+        min-width: 10px;
+    }
+}
+
+@media (max-width: 767px) {
+    .searchCard .searchCardHolder {
+    }
+
+    .searchCard .searchCardHolder .primaryInfo {
+        min-height: 300px !important;
+    }
+}
+
+@media (max-width: 767px) and (max-width: 1199px) and (min-width: 993px) {
+    .searchCard .searchCardHolder .primaryInfo {
+        min-height: 370px !important;
+    }
+}
+
+@media (max-width: 767px) and (max-width: 992px) {
+    .searchCard .searchCardHolder .primaryInfo {
+        min-height: auto !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .searchCard .searchCardHolder .primaryInfo .imageHolder {
+        width: 30%;
+        display: none;
+    }
+}
+
+@media (max-width: 767px) {
+    .searchCard .searchCardHolder .primaryInfo .dataHolder {
+        width: 100%;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .searchCard .searchCardHolder .primaryInfo .dataHolder.ps-3 {
+        padding-left: 0 !important;
+    }
+
+    .searchCard .searchCardHolder .primaryInfo .dataHolder .dataHolderLeft {
+        width: 100% !important;
+        padding-right: 0 !important;
+    }
+
+    .searchCard .searchCardHolder .primaryInfo .dataHolder .dataHolderLeft .imageHolder {
+        display: flex !important;
+        height: 110px;
+        width: 120px;
+    }
+}
+
+@media (max-width: 767px) and (max-width: 1199px) and (min-width: 993px) {
+    .searchCard .searchCardHolder .primaryInfo .dataHolder .dataHolderLeft .imageHolder {
+        min-height: 154px;
+    }
+}
+
+@media (max-width: 767px) {
+    .searchCard .searchCardHolder .primaryInfo .dataHolder .dataHolderLeft .imageHolder img {
+        height: 110px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 767px) and (max-width: 1199px) and (min-width: 993px) {
+    .searchCard .searchCardHolder .primaryInfo .dataHolder .dataHolderLeft .imageHolder img {
+        min-height: 154px;
+    }
+}
+
+@media (max-width: 767px) {
+    .searchCard .searchCardHolder .primaryInfo .dataHolder .dataHolderLeft .gridTitleWpr {
+        width: calc(100% - 143px);
+        padding-left: 12px;
+    }
+
+    .searchCard .searchCardHolder .primaryInfo .dataHolder .dataHolderLeft .gridTitleWpr .tourTypeBlock .tourType {
+        font-size: 9px;
+        padding: 0 3px;
+    }
+
+    @supports (-webkit-touch-callout: none) {
+        .searchCard .searchCardHolder .primaryInfo .dataHolder .dataHolderLeft .gridTitleWpr .tourTypeBlock .tourType {
+            line-height: 22px;
+        }
+    }
+}
+
+@media (max-width: 767px) and (max-width: 400px) {
+    .searchCard .searchCardHolder .primaryInfo .dataHolder .dataHolderLeft .gridTitleWpr .tourTypeBlock .tourType {
+        font-size: 7px;
+    }
+}
+
+@media (max-width: 767px) {
+    .searchCard .searchCardHolder .primaryInfo .dataHolder .dataHolderLeft .gridTitleWpr .cardTitle {
+        font-weight: 800;
+        font-size: 15px;
+        line-height: 20px;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-box-orient: vertical;
+        padding-right: 0 !important;
+        display: -webkit-box !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .searchCard .searchCardHolder .primaryInfo .dataHolder .dataHolderLeft .gridTitleWpr .daysCities.me-3 {
+        margin-right: 0 !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .searchCard .searchCardHolder .primaryInfo .dataHolder .dataHolderLeft .smallButtonsHolder {
+        display: none !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .searchCard .searchCardHolder .primaryInfo .dataHolder .dataHolderLeft .destinations {
+        align-items: flex-start !important;
+    }
+}
+
+@media (max-width: 767px) and (max-width: 1199px) and (min-width: 993px) {
+    .searchCard .searchCardHolder .primaryInfo .dataHolder .dataHolderLeft .destinations {
+        min-height: 45px !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .searchCard .searchCardHolder .primaryInfo .dataHolder .dataHolderLeft .inclusionCol {
+        margin-right: 12px !important;
+    }
+
+    .searchCard .searchCardHolder .primaryInfo .dataHolder .dataHolderLeft .inclusionCol:last-child {
+        margin-right: 0 !important;
+    }
+
+    .searchCard .searchCardHolder .primaryInfo .dataHolder .dataHolderLeft .inclusionCol:last-child [class^=icon] {
+        margin-right: 0;
+    }
+
+    .searchCard .searchCardHolder .primaryInfo .dataHolder .dataHolderLeft .inclusionCol .text {
+        display: none !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .searchCard .searchCardHolder .primaryInfo .dataHolder .onRequest {
+        font-size: 13px;
+        position: relative;
+        top: -5px;
+    }
+}
+
+@media (max-width: 767px) {
+    .searchCard .searchCardHolder .primaryInfo .moreButton {
+        margin-top: 0.2rem !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .searchCard .searchCardHolder .primaryInfo .likeNShare {
+        position: absolute !important;
+        flex-direction: column;
+        width: 22px;
+        right: 11px !important;
+    }
+
+    .searchCard .searchCardHolder .primaryInfo .likeNShare button {
+        margin-bottom: 15px;
+    }
+
+    .searchCard .searchCardHolder .primaryInfo .likeNShare button.me-2 {
+        margin-right: 0 !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .searchCard .searchCardHolder .primaryInfo .dataHolderRight {
+        position: relative !important;
+        width: 100% !important;
+        padding-left: 0 !important;
+    }
+}
+
+@media (max-width: 767px) and (max-width: 1199px) and (min-width: 993px) {
+    .searchCard .searchCardHolder .primaryInfo .dataHolderRight {
+        min-height: 134px;
+    }
+}
+
+@media (max-width: 767px) and (max-width: 992px) {
+    .searchCard .searchCardHolder .primaryInfo .dataHolderRight {
+        min-height: 138px;
+    }
+}
+
+@media (max-width: 767px) and (max-width: 767px) {
+    .searchCard .searchCardHolder .primaryInfo .dataHolderRight {
+        min-height: auto;
+    }
+}
+
+@media (max-width: 767px) {
+    .searchCard .searchCardHolder .primaryInfo .dataHolderRight:before {
+        width: calc(100% + 24px) !important;
+        height: calc(100% + 15px) !important;
+        left: -11px !important;
+        top: 0 !important;
+        background: #CFDDFF !important;
+        border-radius: 0 0 10px 10px;
+    }
+}
+
+@media (max-width: 767px) {
+    .searchCard .searchCardHolder .primaryInfo .dataHolderRight .buttonsforGrid {
+        display: flex !important;
+        position: absolute;
+        top: 25px;
+        z-index: 0;
+    }
+
+    .searchCard .searchCardHolder .primaryInfo .dataHolderRight .buttonsforGrid .quickQuote {
+        height: 24px;
+        padding: 0 8px 0 0;
+        font-size: 14px;
+        font-weight: 700;
+    }
+
+    .searchCard .searchCardHolder .primaryInfo .dataHolderRight .buttonsforGrid .quickQuote .icon-rupee {
+        background: #fff;
+        width: 26px;
+        height: 26px;
+        border-radius: 100%;
+        position: relative;
+        left: -3px;
+        border: 1px solid #DFE4F0;
+    }
+
+    .searchCard .searchCardHolder .primaryInfo .dataHolderRight .buttonsforGrid .quickQuote .icon-rupee:before {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+}
+
+@media (max-width: 767px) {
+    .searchCard .searchCardHolder .primaryInfo .dataHolderRight .priceData {
+        padding-top: 13px !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .searchCard .searchCardHolder .primaryInfo .dataHolderRight .buttonHolder {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 5px;
+    }
+
+    .searchCard .searchCardHolder .primaryInfo .dataHolderRight .buttonHolder button {
+        width: calc(50% - 10px) !important;
+    }
+
+    .searchCard .searchCardHolder .primaryInfo .dataHolderRight .buttonHolder button.enquireNow {
+        width: 100% !important;
+        height: 35px !important;
+    }
+
+    .searchCard .searchCardHolder .primaryInfo .dataHolderRight .buttonHolder button.mb-2 {
+        margin-bottom: 0 !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .searchCard .searchCardHolder .primaryInfo .dataHolderRight .superDealLabel.pt-3 {
+        padding-top: 0 !important;
+    }
+}
+
+.skeletonCard.searchCard {
+    border: 0;
+    padding: 0;
+}
+
+.skeletonCard.searchCard:first-child {
+    margin-top: 0;
+}
+
+@media (max-width: 1440px) and (min-width: 768px) {
+    .skeletonCard.searchCard .searchCardHolder {
+        padding-bottom: 15px;
+    }
+}
+
+.skeletonCard.searchCard .searchCardHolder.gridWpr {
+    display: none;
+    padding-bottom: 15px;
+}
+
+@media (max-width: 767px) {
+    .skeletonCard.searchCard .searchCardHolder.gridWpr {
+        display: block;
+    }
+}
+
+@media (max-width: 767px) {
+    .skeletonCard.searchCard .searchCardHolder.listWpr {
+        display: none;
+    }
+}
+
+.skeletonCard.searchCard .searchCardHolder .imageHolder {
+    align-self: stretch;
+    height: 269px;
+    border-radius: 10px;
+}
+
+.skeletonCard.searchCard .searchCardHolder .dataHolder .leftData {
+    width: 50%;
+}
+
+.skeletonCard.searchCard .searchCardHolder .dataHolder .priceData {
+    width: 40%;
+}
+
+.skeletonCard.searchCard .searchCardHolder .dataHolder .buttonIcon {
+    border: 0;
+}
+
+.skeletonCard.searchCard .searchCardHolder .dataHolder .buttonIcon:first-child {
+    margin-right: 10px;
+}
+
+.skeletonCard.searchCard .searchCardHolder .dataHolder .dateSquare {
+    width: 120px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.skeletonCard.searchCard .searchCardHolder .dataHolder .buttonHolder {
+    height: 90px;
+    width: 40%;
+}
+
+.skeletonCard.searchCard .searchCardHolder .dataHolder .buttonHolder .skButton {
+    width: 161px;
+    float: right;
+}
+
+.skeletonCard.searchCard .searchCardHolder.gridWpr {
+    padding-bottom: 15px;
+}
+
+.skeletonCard.searchCard .searchCardHolder.gridWpr .greyHolder .buttonIcon {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+}
+
+.skeletonCard.searchCard .searchCardHolder.gridWpr .greyHolder .buttonIcon:last-child {
+    top: 50px;
+}
+
+.inclusionWpr.showInList {
+    display: block;
+}
+
+.inclusionWpr.showInGrid {
+    display: none;
+}
+
+.text-muted.showInGrid {
+    display: none;
+}
+
+@media (max-width: 767px) {
+    .searchCard.customise-card .text-muted.showInGrid, .searchCard.cominSoon-card .text-muted.showInGrid {
+        display: block;
+        padding-bottom: 0;
+        padding-top: 14px;
+        margin-top: 0;
+    }
+}
+
+.searchCard .nodepartures .dataHolder .price.noPrice .comingSoon {
+    margin-top: 54px;
+}
+
+@media (max-width: 767px) {
+    .searchCard .nodepartures .dataHolder .price.noPrice .comingSoon {
+        margin-top: 0;
+        margin-bottom: 8px;
+    }
+}
+
+.searchCard.gridView {
+    transition: all 0.3s;
+}
+
+.searchCard.gridView.cominSoon-card .inclusionWpr.showInList {
+    display: none;
+}
+
+.searchCard.gridView.cominSoon-card .inclusionWpr.showInGrid {
+    display: block;
+    margin-top: 4px;
+}
+
+.searchCard.gridView.customise-card .inclusionWpr.showInList {
+    display: none;
+}
+
+.searchCard.gridView.customise-card .inclusionWpr.showInGrid {
+    display: block;
+    margin-top: 4px;
+}
+
+.searchCard.gridView.customise-card .searchCardHolder .cityDaysWpr {
+    border-bottom: 0;
+}
+
+.searchCard.gridView.customise-card .searchCardHolder .primaryInfo .dataHolderRight .buttonHolder {
+    padding-top: 2px !important;
+}
+
+.searchCard.gridView.customise-card .text-muted.showInGrid {
+    display: block;
+    text-align: center;
+}
+
+.searchCard.gridView.customise-card .priceData.mt-0 {
+    margin-top: 0 !important;
+}
+
+.searchCard.gridView.customise-card .searchCardHolder .primaryInfo .dataHolderRight .priceData {
+    padding-top: 0 !important;
+}
+
+.searchCard.gridView.customise-card .ratingnReviews.getMarginTop {
+    margin-top: 7px;
+}
+
+.searchCard.gridView .nodepartures .text-muted.showInGrid {
+    display: block;
+    text-align: center;
+    margin-top: 14px;
+}
+
+.searchCard.gridView .nodepartures .comingSoon {
+    margin-top: 24px !important;
+}
+
+.searchCard.gridView .inclusionWpr.showInList {
+    display: block;
+}
+
+.searchCard.gridView .inclusionWpr.showInGrid {
+    display: none;
+}
+
+.searchCard.gridView .callText {
+    display: none;
+}
+
+.searchCard.gridView .noborder-Bottom {
+    border-bottom: 0 !important;
+}
+
+.searchCard.gridView .text-muted.showInGrid {
+    display: none;
+}
+
+@media (min-width: 1200px) and (max-width: 1440px) {
+    .searchCard.gridView .searchCardHolder {
+        min-height: 347px !important;
+    }
+}
+
+.searchCard.gridView .searchCardHolder:hover {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+}
+
+.searchCard.gridView .searchCardHolder .primaryInfo {
+    min-height: 393px !important;
+}
+
+@media (max-width: 1199px) and (min-width: 993px) {
+    .searchCard.gridView .searchCardHolder .primaryInfo {
+        min-height: 415px !important;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1440px) {
+    .searchCard.gridView .searchCardHolder .primaryInfo {
+        min-height: 390px !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .searchCard.gridView .searchCardHolder .primaryInfo {
+        min-height: auto !important;
+    }
+}
+
+.searchCard.gridView .searchCardHolder .primaryInfo .imageHolder {
+    width: 30%;
+    display: none;
+}
+
+.searchCard.gridView .searchCardHolder .primaryInfo .dataHolderRight .priceData.pt-0 {
+    padding-top: 0 !important;
+}
+
+.searchCard.gridView .searchCardHolder .primaryInfo .dataHolderLeft .quickQuote {
+    display: none !important;
+}
+
+.searchCard.gridView .searchCardHolder .primaryInfo .dataHolder {
+    width: 100%;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.searchCard.gridView .searchCardHolder .primaryInfo .dataHolder.ps-3 {
+    padding-left: 0 !important;
+}
+
+.searchCard.gridView .searchCardHolder .primaryInfo .dataHolder .dataHolderLeft {
+    width: 100% !important;
+    padding-right: 0 !important;
+}
+
+.searchCard.gridView .searchCardHolder .primaryInfo .dataHolder .dataHolderLeft .imageHolder {
+    width: 115px;
+    height: 110px;
+    display: flex !important;
+}
+
+@media (max-width: 992px) {
+    .searchCard.gridView .searchCardHolder .primaryInfo .dataHolder .dataHolderLeft .imageHolder {
+        width: 120px;
+        height: 110px;
+    }
+}
+
+.searchCard.gridView .searchCardHolder .primaryInfo .dataHolder .dataHolderLeft .imageHolder img {
+    height: 100%;
+}
+
+.searchCard.gridView .searchCardHolder .primaryInfo .dataHolder .dataHolderLeft .customizedText {
+    padding-top: 25px;
+    padding-bottom: 10px;
+    display: none;
+}
+
+.searchCard.gridView .searchCardHolder .primaryInfo .dataHolder .dataHolderLeft .gridTitleWpr {
+    width: calc(100% - 137px);
+    padding-left: 15px;
+}
+
+@media (max-width: 1440px) {
+    .searchCard.gridView .searchCardHolder .primaryInfo .dataHolder .dataHolderLeft .gridTitleWpr .typeIndicator {
+        flex-direction: column;
+        align-items: flex-start !important;
+    }
+}
+
+.searchCard.gridView .searchCardHolder .primaryInfo .dataHolder .dataHolderLeft .gridTitleWpr .tourTypeBlock .tourType {
+    font-size: 8px;
+    padding: 0 3px;
+    white-space: nowrap;
+}
+
+.searchCard.gridView .searchCardHolder .primaryInfo .dataHolder .dataHolderLeft .gridTitleWpr .titleDiv {
+    width: 100%;
+    margin-top: 7px;
+}
+
+.searchCard.gridView .searchCardHolder .primaryInfo .dataHolder .dataHolderLeft .gridTitleWpr .cardTitle {
+    font-weight: 800;
+    font-size: 15px;
+    line-height: 20px;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    padding-right: 0 !important;
+    display: -webkit-box !important;
+    height: 40px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.searchCard.gridView .searchCardHolder .primaryInfo .dataHolder .dataHolderLeft .gridTitleWpr .daysCities.me-3 {
+    margin-right: 0 !important;
+}
+
+.searchCard.gridView .searchCardHolder .primaryInfo .dataHolder .dataHolderLeft .inclusionWpr {
+    margin-bottom: 0;
+}
+
+.searchCard.gridView .searchCardHolder .primaryInfo .dataHolder .dataHolderLeft .smallButtonsHolder {
+    display: none !important;
+}
+
+.searchCard.gridView .searchCardHolder .primaryInfo .dataHolder .dataHolderLeft .destinations {
+    align-items: flex-start !important;
+}
+
+@media (max-width: 1199px) and (min-width: 993px) {
+    .searchCard.gridView .searchCardHolder .primaryInfo .dataHolder .dataHolderLeft .destinations {
+        min-height: 45px !important;
+    }
+}
+
+.searchCard.gridView .searchCardHolder .primaryInfo .dataHolder .dataHolderLeft .inclusionCol {
+    margin-right: 12px !important;
+}
+
+.searchCard.gridView .searchCardHolder .primaryInfo .dataHolder .dataHolderLeft .inclusionCol .text {
+    display: none !important;
+}
+
+.searchCard.gridView .searchCardHolder .primaryInfo .cityDaysWpr {
+    padding-top: 25px;
+}
+
+.searchCard.gridView .searchCardHolder .primaryInfo .cityDaysWpr:after {
+    top: 32px;
+    right: 5px;
+    transform: rotate(-132deg);
+}
+
+.searchCard.gridView .searchCardHolder .primaryInfo .departureWpr {
+    border-bottom: 0;
+}
+
+.searchCard.gridView .searchCardHolder .primaryInfo .departureWpr .lowpriceButton {
+    display: none;
+}
+
+.searchCard.gridView .searchCardHolder .primaryInfo .departureWpr + .ratingnReviews {
+    display: none !important;
+}
+
+.searchCard.gridView .searchCardHolder .primaryInfo .departureWpr:after {
+    right: 5px;
+    transform: rotate(-132deg);
+}
+
+.searchCard.gridView .searchCardHolder .primaryInfo .departureWpr.active:after {
+    top: 14px;
+}
+
+.searchCard.gridView .searchCardHolder .primaryInfo .moreButton {
+    margin-top: 1px !important;
+}
+
+.searchCard.gridView .searchCardHolder .primaryInfo .likeNShare {
+    position: absolute !important;
+    flex-direction: column;
+    width: 22px;
+    right: 11px !important;
+}
+
+.searchCard.gridView .searchCardHolder .primaryInfo .likeNShare button {
+    margin-bottom: 8px;
+}
+
+@media (min-width: 993px) {
+    .searchCard.gridView .searchCardHolder .primaryInfo .likeNShare button .icon-wishlist, .searchCard.gridView .searchCardHolder .primaryInfo .likeNShare button .icon-share {
+        position: relative;
+        top: 1px;
+    }
+}
+
+.searchCard.gridView .searchCardHolder .primaryInfo .likeNShare button.me-2 {
+    margin-right: 0 !important;
+}
+
+.searchCard.gridView .searchCardHolder .primaryInfo .dataHolderRight {
+    position: relative !important;
+    width: 100% !important;
+    padding-left: 0 !important;
+    min-height: 191px;
+}
+
+@media (max-width: 1199px) and (min-width: 768px) {
+    .searchCard.gridView .searchCardHolder .primaryInfo .dataHolderRight {
+        min-height: 160px;
+    }
+}
+
+@media (max-width: 767px) {
+    .searchCard.gridView .searchCardHolder .primaryInfo .dataHolderRight {
+        margin-top: 15px;
+        min-height: auto;
+    }
+}
+
+.searchCard.gridView .searchCardHolder .primaryInfo .dataHolderRight:before {
+    width: calc(100% + 30px) !important;
+    height: calc(100% + 17px) !important;
+    border-radius: 0 0 10px 10px;
+    left: -15px !important;
+    top: 0 !important;
+    background: #CFDDFF !important;
+}
+
+.searchCard.gridView .searchCardHolder .primaryInfo .dataHolderRight .buttonsforGrid {
+    display: flex !important;
+    position: absolute;
+    top: 25px;
+    z-index: 2;
+}
+
+.searchCard.gridView .searchCardHolder .primaryInfo .dataHolderRight .buttonsforGrid .ratingnReviews {
+    margin-bottom: 15px;
+    padding: 0;
+}
+
+.searchCard.gridView .searchCardHolder .primaryInfo .dataHolderRight .buttonsforGrid .lowpriceButton {
+    padding-right: 5px !important;
+    padding-left: 5px !important;
+    flex-direction: row;
+    align-items: center;
+    min-width: 140px;
+    line-height: 30px;
+}
+
+.searchCard.gridView .searchCardHolder .primaryInfo .dataHolderRight .buttonsforGrid .lowpriceButton span {
+    font-size: 11px !important;
+    display: inline-block !important;
+    line-height: 30px;
+}
+
+.searchCard.gridView .searchCardHolder .primaryInfo .dataHolderRight .buttonsforGrid .lowpriceButton div {
+    display: inline-block !important;
+    padding-right: 2px;
+}
+
+.searchCard.gridView .searchCardHolder .primaryInfo .dataHolderRight .buttonsforGrid .quickQuote {
+    min-width: 115px;
+    margin-bottom: 10px;
+    height: 24px;
+    font-size: 14px;
+    font-weight: 700;
+    position: relative;
+    padding-left: 24px;
+    padding-right: 6px;
+}
+
+.searchCard.gridView .searchCardHolder .primaryInfo .dataHolderRight .buttonsforGrid .quickQuote .icon-rupee {
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    border-radius: 100%;
+    background: #fff;
+    border: 1px solid #DFE4F0;
+    left: -4px;
+    top: -1px;
+}
+
+.searchCard.gridView .searchCardHolder .primaryInfo .dataHolderRight .buttonsforGrid .quickQuote .icon-rupee:before {
+    top: 5px;
+    position: relative;
+}
+
+.searchCard.gridView .searchCardHolder .primaryInfo .dataHolderRight .buttonsforGrid .customizedText {
+    padding-top: 5px;
+}
+
+.searchCard.gridView .searchCardHolder .primaryInfo .dataHolderRight .listViewHeight {
+    min-height: 10px;
+    display: block;
+}
+
+.searchCard.gridView .searchCardHolder .primaryInfo .dataHolderRight .buttonHolder .quickQuote {
+    display: none;
+}
+
+.searchCard.gridView .searchCardHolder .primaryInfo .dataHolderRight .buttonHolder .mob-halfWid {
+    width: calc(50% - 10px);
+}
+
+.searchCard.gridView .searchCardHolder .primaryInfo .dataHolderRight .buttonHolder .mob-halfWid .enquireNow {
+    width: 100% !important;
+    height: 45px;
+    font-size: 14px;
+    border-color: #212221;
+}
+
+@media (max-width: 992px) {
+    .searchCard.gridView .searchCardHolder .primaryInfo .dataHolderRight .buttonHolder .mob-halfWid .enquireNow {
+        height: 32px;
+    }
+}
+
+.searchCard.gridView .searchCardHolder .primaryInfo .dataHolderRight .comingSoon {
+    position: relative;
+}
+
+@media (max-width: 992px) {
+    .searchCard.gridView .searchCardHolder .primaryInfo .dataHolderRight .comingSoon {
+        top: -15px;
+    }
+}
+
+.searchCard.gridView .searchCardHolder .primaryInfo .dataHolderRight .onRequest {
+    font-size: 13px;
+    position: relative;
+}
+
+@media (max-width: 992px) {
+    .searchCard.gridView .searchCardHolder .primaryInfo .dataHolderRight .onRequest {
+        top: -15px;
+    }
+}
+
+@media (max-width: 400px) {
+    .searchCard.gridView .searchCardHolder .primaryInfo .dataHolderRight .onRequest {
+        width: 187px;
+        margin-left: auto;
+        line-height: 16px;
+    }
+}
+
+.searchCard.gridView .searchCardHolder .primaryInfo .dataHolderRight .priceData {
+    padding-top: 24px !important;
+}
+
+.searchCard.gridView .searchCardHolder .primaryInfo .dataHolderRight .price.noPrice {
+    margin-top: 0;
+}
+
+.searchCard.gridView .searchCardHolder .primaryInfo .dataHolderRight .buttonHolder {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px !important;
+}
+
+@media (min-width: 768px) and (orientation: landscape) {
+    .searchCard.gridView .searchCardHolder .primaryInfo .dataHolderRight .buttonHolder {
+        padding-top: 20px !important;
+    }
+}
+
+.searchCard.gridView .searchCardHolder .primaryInfo .dataHolderRight .buttonHolder button {
+    width: calc(50% - 10px) !important;
+}
+
+.searchCard.gridView .searchCardHolder .primaryInfo .dataHolderRight .buttonHolder button.mb-2 {
+    margin-bottom: 0 !important;
+}
+
+.searchCard.gridView .searchCardHolder .primaryInfo .dataHolderRight .superDealLabel {
+    margin-top: 0;
+}
+
+.searchCard.gridView .searchCardHolder .primaryInfo .dataHolderRight .superDealLabel.pt-1 {
+    padding-top: 0 !important;
+}
+
+.searchCard.gridView .searchCardHolder .secndryInfo {
+    display: none !important;
+}
+
+@supports (-webkit-overflow-scrolling: touch) {
+    .likeNShare .buttonIcon [class^=icon] {
+        right: 6px;
+    }
+
+    .searchCard .searchCardHolder .primaryInfo .dataHolderRight:before {
+        height: 50%;
+        background: linear-gradient(#d6d6d6 10%, #ffffff) !important;
+    }
+
+    .likeNShare .buttonIcon .icon-share {
+        position: relative;
+    }
+}
+
+@media screen and (max-width: 360px) and (min-width: 320px) {
+    .searchCard.gridView .searchCardHolder .primaryInfo .dataHolder .dataHolderLeft .imageHolder {
+        width: 100px;
+        height: 100px;
+    }
+
+    .searchCard.gridView .searchCardHolder .primaryInfo .dataHolder .dataHolderLeft .gridTitleWpr {
+        width: calc(100% - 100px);
+    }
+
+    .searchCard.gridView .searchCardHolder .primaryInfo .dataHolderRight {
+    }
+
+    .searchCard.gridView .searchCardHolder .primaryInfo .dataHolderRight .buttonHolder button {
+        width: calc(50% - 5px) !important;
+        font-size: 12px;
+    }
+
+    .searchCard .dataHolder .superDealLabel {
+        font-size: 9px;
+    }
+
+    .searchCard .dataHolder .priceNote {
+        font-size: 9px;
+    }
+
+    .searchCard .dataHolder .inclusionCol [class^=icon] {
+        font-size: 16px;
+    }
+}
+
+@supports (-webkit-text-size-adjust: none) and (not (-ms-accelerator: true)) {
+    @media (min-width: 1441px) {
+        .likeNShare button .icon-wishlist {
+            position: relative;
+            top: 1px;
+        }
+    }
+}
+
+.destinationsHolder {
+    padding: 20px 0 20px 20px;
+}
+
+@media (max-width: 1200px) {
+    .destinationsHolder .destinationWpr {
+        margin-top: 10px;
+    }
+}
+
+.departureHolder .skeletonCard {
+    margin-bottom: 15px;
+    border: 0;
+}
+
+@media (min-width: 1201px) {
+    .departureHolder .blackOverlay, .destinationsHolder .blackOverlay {
+        display: none;
+    }
+
+    .departureHolder .header, .destinationsHolder .header {
+        display: none;
+    }
+
+    .departureHolder .holder, .destinationsHolder .holder {
+        border-top: 0;
+        padding: 0 20px;
+        box-sizing: border-box;
+        margin: 0 !important;
+    }
+}
+
+@media (max-width: 1200px) {
+    .departureHolder .blackOverlay, .destinationsHolder .blackOverlay {
+        z-index: 2000;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .departureHolder .blackOverlay + .holder, .destinationsHolder .blackOverlay + .holder {
+        z-index: 2001;
+        position: fixed;
+        top: -10px;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        max-width: 400px;
+        background: #fff;
+        border-top: 0 !important;
+        padding: 20px;
+        max-height: 100vh;
+        overflow: hidden;
+        border-top: 0 !important;
+    }
+
+    .departureHolder .blackOverlay + .holder .header, .destinationsHolder .blackOverlay + .holder .header {
+        width: calc(100% + 20px);
+        height: 50px;
+        background: #F5F5F5;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: #29499A;
+        font-size: 16px;
+        font-weight: 700;
+        position: relative;
+        left: -20px;
+        top: -20px;
+        padding: 0 20px;
+    }
+
+    .departureHolder .blackOverlay + .holder .header button, .destinationsHolder .blackOverlay + .holder .header button {
+        border: 0;
+        background: transparent;
+        color: #212121 !important;
+    }
+
+    .departureHolder .blackOverlay + .holder .header button .icon-close, .destinationsHolder .blackOverlay + .holder .header button .icon-close {
+        color: #212121 !important;
+    }
+
+    .departureHolder .blackOverlay + .holder .header + div, .destinationsHolder .blackOverlay + .holder .header + div {
+        max-height: calc(100vh - 120px);
+        overflow-y: auto;
+        min-height: 250px;
+    }
+
+    @supports (-webkit-touch-callout: none) {
+        @media (max-width: 1200px) and (max-width: 767px) {
+            .departureHolder .blackOverlay + .holder .header + div, .destinationsHolder .blackOverlay + .holder .header + div {
+                max-height: calc(100vh - 230px);
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) and (max-width: 767px) {
+    .departureHolder .blackOverlay + .holder, .destinationsHolder .blackOverlay + .holder {
+        max-width: 100%;
+        top: auto;
+        bottom: -10px;
+        height: auto;
+        left: 4px;
+        border-radius: 20px 20px 0 0;
+        overflow-x: hidden;
+    }
+
+    .departureHolder .blackOverlay + .holder .header, .destinationsHolder .blackOverlay + .holder .header {
+        right: -20px;
+        width: calc(100% + 40px);
+    }
+}
+
+@media (max-width: 1200px) {
+    .primaryInfo .departureWpr .lowpriceButton {
+        display: none !important;
+    }
+}
+
+@media (max-width: 1200px) and (min-width: 768px) {
+    .secndryInfo .destinationWpr .destinations {
+        padding-left: 18px;
+        padding-right: 15px;
+    }
+}
+
+.searchCard .searchCardHolder.addedToCompare .text-muted .customizedText .showInGrid {
+    margin-top: 13px;
+}

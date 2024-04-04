@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+ body{
+  font-family: 'Helvetica', sans-serif;
+  display: flex;
+  height: calc(100vh - 300px); 
+  background: url("https://www.toptal.com/designers/subtlepatterns/patterns/topography.png");
+  color: #444;
+  line-height: 1.6;
+  padding: 150px;
+  margin: 0;
+}
+
+figure{
+  margin: auto;
+  width: 900px;
+  position: relative;
+}
+
+.front, .back{
+  border: 1px solid #eaeaea;
+  border-radius: 5px;
+}
+
+.front{
+  transform: perspective( 2000px ) rotateY( 0deg );
+  transition: all .3s linear;
+  position: relative;
+  backface-visibility: hidden;
+}
+
+.back{
+  transform: perspective( 2000px ) rotateY( 180deg );
+  transition: all .3s linear;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow-y: auto;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 10px 10px 30px rgba(0,0,0,.2);
+  backface-visibility: hidden;
+}
+
+.back__header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  background: #fafafa;
+  border-bottom: 1px solid #eaeaea;
+  border-radius: 5px 5px 0 0;
+  padding: 0 40px;
+}
+
+.back__header button{
+  margin: auto 0;
+}
+
+.back p{
+  padding: 0 40px 40px 40px;
+}
+
+figure .image{
+  overflow: hidden;
+  background: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 10px 10px 30px rgba(0,0,0,.2);
+}
+
+figure img{
+  display: block;
+  width: 100%;
+  border-radius: 2px;
+}
+
+figcaption{
+  padding: 10px 20px;
+  border-radius: 5px 5px 0 0;
+  background: #fff;
+  position: absolute;
+  bottom: 0;
+  right: 5%;
+  left: 40%;
+  transition: 0.2s all linear 0s;
+}
+
+figure h4{
+  margin: 5px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+figure h4 b{
+  align-self: start;
+  color: #444;
+  margin-left: 20px;
+  line-height: 20px;
+}
+
+figure .details{
+  height: 0;
+  overflow: hidden;
+  transition: 0.2s all linear 0s;
+}
+
+figure p{
+  margin: 0;
+  color: #777;
+}
+
+figure button{
+  cursor: pointer;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 2px;
+  color: #fff;
+  padding: .5rem 1rem;
+}
+
+figure button i{
+  margin-left: 1rem;
+}
+
+
+#show-back{
+  display: block;
+  margin-top: 10px;
+  background: #33ad11;
+}
+
+#show-front{
+  margin-top: auto;
+  background: #444;
+}
+@media screen and (min-width: 426px) and (max-width: 769px){
+  body{
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 425px){
+  body{
+    font-size: 12px;
+  }
+  figcaption{
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 5px 5px 0 0;
+    background: #fff;
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+    left: 20px;
+  } 
+}
+    </style>
+</head>
+<body>
+    
+    <figure>
+        <div class="back">
+          <div class="back__header">
+            <h2>1.1.0 Lorem ipsum - dolor sit amet.</h2>
+            <button id="show-front">Back to front<i class="fas fa-reply"></i></button>
+          </div>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum facilis fugit corporis non suscipit quod? Assumenda amet nisi, ratione eaque harum recusandae? Sunt maiores voluptatum quaerat illum accusamus voluptate id unde officia neque, earum porro animi non qui molestiae reiciendis est aut quo quibusdam facere, perspiciatis repellendus nulla esse. Enim saepe, optio sed perferendis id eius iure veniam repudiandae sint ipsa quisquam ipsam, quia dicta harum reiciendis in? Labore voluptatibus sapiente aut in temporibus libero nostrum adipisci quas reiciendis eum accusamus atque officia tempora, nobis doloribus similique quibusdam! Corrupti vel dignissimos pariatur ex tempore earum iste, quisquam voluptatum magni ipsam vitae blanditiis voluptatem accusantium, beatae cumque consequatur dolores, ad impedit autem non fugit corporis facere. Nesciunt repellendus dolorum dolore. Fuga, necessitatibus, dolor nobis delectus labore debitis enim dicta dolorum ipsa soluta, ab quasi odit saepe praesentium temporibus! Totam culpa aliquam fugit modi, quisquam magni consectetur deserunt, illo sequi dicta animi laudantium voluptatibus veritatis incidunt molestias obcaecati ab dolores. Fugiat nemo omnis temporibus laborum consequatur veritatis vitae cupiditate inventore nisi expedita sequi ratione ea in, atque quas explicabo eveniet esse! Facilis suscipit neque accusantium nemo eligendi. Sint veritatis nam iure eius. Laudantium quo excepturi sint laborum error assumenda in magni odit!</p>
+        </div>
+        <div class="front">
+          <div class="image">
+            <img class="img" src="https://images.pexels.com/photos/1168981/pexels-photo-1168981.jpeg?auto=compress&cs=tinysrgb&h=350" alt="">
+          </div>
+          <figcaption>
+            <h4>1.1.0 Lorem ipsum - dolor sit amet.<b class="badge"><i class="fas fa-plus-square"></i></b></h4>
+            <div class="details">
+              <p class="details__content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, quidem. Accusantium adipisci a nam dignissimos cupiditate voluptates sed, commodi natus unde itaque dolor totam consectetur maxime quo neque architecto. Obcaecati?
+                <button id="show-back">Read the back<i class="fas fa-share"></i></button>
+              </p>
+            </div>
+          </figcaption>
+        </div>
+      </figure> 
+
+    <script>
+    var badge = document.querySelector('.badge');
+        var caption = document.querySelector('figcaption');
+        var details = document.querySelector('.details');
+        var detailsContent = document.querySelector('.details__content');
+        
+        var lowResImage = document.querySelector('.img');
+        var highResImage = document.createElement('img');
+        
+        var front = document.querySelector('.front');
+        var back = document.querySelector('.back');
+        var showFrontBtn = document.querySelector('#show-front');
+        var showBackBtn = document.querySelector('#show-back');
+        
+        // Figcaption Hover Preview
+        caption.addEventListener('mouseover', function () {
+          var contentHeight = detailsContent.offsetHeight;
+          details.style.height = contentHeight + 10 + 'px';
+          badge.innerHTML = '<i class="fas fa-minus-square"></i>';
+        });
+        
+        caption.addEventListener('mouseout', function () {
+          details.style.height = 0;
+          badge.innerHTML = '<i class="fas fa-plus-square"></i>';
+        });
+        
+        // Lazy Load Figure Image
+        highResImage.onload = function () {
+          lowResImage.src = highResImage.src;
+        }
+        setTimeout(function () {
+         highResImage.src = 'https://images.pexels.com/photos/1168981/pexels-photo-1168981.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=3595&w=5407';
+        }, 1000);
+        
+        // Card Flipping
+        showBackBtn.addEventListener('click', function () {
+          back.style.transform = "perspective( 2000px ) rotateY( 0deg )";
+          front.style.transform = "perspective( 2000px ) rotateY( -180deg )";
+        });
+        
+        showFrontBtn.addEventListener('click', function () {
+          front.style.transform = "perspective( 2000px ) rotateY( 0deg )";
+          back.style.transform = "perspective( 2000px ) rotateY( 180deg )";
+        });
+
+
+    </script>
+</body>
+</html>

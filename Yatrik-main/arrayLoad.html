@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Yatrik</title>
+	<link rel="icon" type="image/x-icon" href="images/top.ico">
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'poppins', sans-serif;
+        font-size: 18px;
+    }
+    .body {
+        margin: 4vh;
+    }
+    .data {
+        width: 100%;
+        border-radius: 3px;
+        overflow-y: auto;
+    }
+    #root {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 20px;
+    }
+    .box {
+        margin: 1px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        border: 1px solid #333;
+        border-radius: 5px;
+        box-shadow: 10px 10px 10px lightblue;
+        padding: 15px;
+    }
+    .img-box {
+        width: 100%;
+        height: 176px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .images {
+        max-height: 100%;
+        max-width: 100%;
+        box-shadow:5px 5px 10px #333;
+        object-fit: cover;
+        border-radius: 8px;
+        object-position: center;
+    }
+    .botom {
+        margin-top: 20px;
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+    h2 {
+        font-size: 20px;
+        color: orangered;
+    }
+    a{
+       text-decoration: none;
+    }
+    .button_ {
+        width: 100%;
+        position: relative;
+        border: none;
+        border-radius: 5px;
+        background-color: #333;
+        padding: 7px 25px;
+        cursor: pointer;
+        color: white;
+    }
+    .button_:hover {
+        color: #fff;
+        background-color: orangered;
+    }
+    ::-webkit-scrollbar {
+        display: none;
+    }
+    
+  /* Preloader round---------------------------------------------------- */
+    .preloader{
+        background:#000;
+        background-size:10%;
+        height:100%;
+        width:100%;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        position:fixed;
+        z-index:100;
+        transition:opacity 0.95s, visibility 0.95s;
+    }
+    .preloader::after{
+        content:"";
+        width:50px;
+        height:50px;
+        border:5px solid #fff;
+        border-top-color:var(--pink);
+        border-radius:50%;
+        animation: loading 0.95s ease infinite;
+    }
+    .preloader--hidden{
+        opacity:0;
+        visibility:hidden;
+    }
+    
+    @keyframes loading{
+        from{transform:rotate(0turn)}
+        to{transform:rotate(1turn)}
+    }
+
+</style>
+</head>
+<body>
+    <div class=preloader></div>
+    <div class="data">
+        <div class="body">
+            <div id="root"></div>
+        </div>
+    </div>
+    <!-- -------------------------------------------------------------- -->
+    <script>
+        const product = [
+            {
+                id: 0,
+                image: 'images/uk.png',
+                title: 'United Kingdom',
+                price: 520,
+            },
+            {
+                id: 1,
+                image: 'images/france.png',
+                title: 'France',
+                price: 600,
+            },
+            {
+                id: 2,
+                image: 'images/italy.png',
+                title: 'Italy',
+                price: 230,
+            },
+            {
+                id: 3,
+                image: 'images/india.png',
+                title: 'India',
+                price: 1000,
+            },
+            {
+                id: 4,
+                image: 'images/us.png',
+                title: 'United States',
+                price: 230,
+            },
+            {
+                id: 5,
+                image: 'images/pakistan.png',
+                title: 'Pakistan',
+                price: 100,
+            },
+            {
+                id: 6,
+                image: 'images/spain.jpg',
+                title: 'Spain',
+                price: 300,
+            },
+            {
+                id: 7,
+                image: 'images/china.jpg',
+                title: 'China',
+                price: 200,
+            },
+            {
+                id: 8,
+                image: 'images/germany.jpg',
+                title: 'Germany',
+                price: 600,
+            },
+            {
+                id: 9,
+                image: 'images/maxico.jpeg',
+                title: 'Mexico',
+                price: 100,
+            },
+            {
+                id: 10,
+                image: 'images/thailand.jpeg',
+                title: 'Thailand',
+                price: 100,
+            },
+            {
+                id: 11,
+                image: 'images/turkey.jpg',
+                title: 'Turkey',
+                price: 100,
+            },
+            
+        ];
+
+        const categories = [...new Set(product.map((item) => { return item }))]
+
+        const displayItem = (items) => {
+            document.getElementById('root').innerHTML = items.map((item) => {
+                var { image, title, price } = item;
+                return (
+                    `<div class='box'>
+                        <div class='img-box'>
+                            <img class='images' src=${image}></img>
+                        </div> 
+                        <div class='botom'>
+                            <p>${title}</p>
+                            <h2>Up to $${price}.00</h2>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut, doloribus!</p>
+                            <div class="star">
+                                <i class="fa-solid fa-star checked"></i>
+                                <i class="fa-solid fa-star checked"></i>
+                                <i class="fa-solid fa-star checked"></i>
+                                <i class="fa-solid fa-star checked "></i>
+                                <i class="fa-solid fa-star checked"></i>
+                            </div><br>
+                        <a href="place.php" class="button_">Explore Now!</a>
+                        </div>
+                    </div>`
+                )
+            }).join('')
+        };
+        displayItem(categories);
+
+    </script>
+   
+    <!--....................preloader........................-->
+
+    <script>
+        <!--window.addEventListener("load", () => {document.querySelector(".preloader").classList.add("preloader--hidden");})-->
+        window.addEventListener("load", ()=>{
+        const loader =document.querySelector(".preloader");
+        loader.classList.add("preloader--hidden");
+        loader.addEventListener("transitionend",()=>{
+        document.body.removeChild(loader);
+        })
+        })
+    </script>
+</body>
+</html>
